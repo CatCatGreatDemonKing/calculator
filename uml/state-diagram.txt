@@ -1,0 +1,17 @@
+@startuml
+
+[*]--> s1
+s1--> s2:2 触发事件源
+s2-->s3:3 生成事件:系统生成的ActionEvent
+s3-->s4:4 触发事件监听器：事件ActioEvent被作为参数传入事件监听器
+s4-->s2:1 将事件监听器注册到事件源,button.addActionListener(myActionListener)
+s4-->s5:5 调用事件处理器
+s5-->[*]
+
+state "外部动作：点击按钮" as s1
+state "事件源：按钮button" as s2
+state "事件:ActionEvent" as s3
+state "事件监听器：myActionListener" as s4
+state "事件处理器：actionPerformed()" as s5
+
+@enduml

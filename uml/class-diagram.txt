@@ -1,0 +1,19 @@
+@startuml
+
+screen --|> JTextArea:继承
+numberPanel --|> JPanel
+operationPanel --|> JPanel
+arithmeticPanel --|> JPanel
+calculator --|> JFrame
+button --|> JButton
+
+screen --* calculator:组成
+numberPanel --* calculator
+button --* numberPanel
+button --* operationPanel
+button --* arithmeticPanel
+operationPanel --* calculator
+arithmeticPanel --* calculator
+modePanel --* calculator
+
+@enduml

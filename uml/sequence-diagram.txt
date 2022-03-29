@@ -1,0 +1,8 @@
+@startuml
+
+buttonListener-> process:screen's text
+process ->arithmetic:ok
+arithmetic ->process:arithmetic result
+process ->buttonListener:will display's text
+@enduml
+
